@@ -16,7 +16,7 @@ if (paused == true){
 }
 }
 
-media.onplaying = function() {
+music.onplaying = function() {
   btntxt.innerHTML = "Pause The Music";
 };
 
