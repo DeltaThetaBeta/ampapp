@@ -89,9 +89,6 @@ function songProgress() {
 }
 
 // DEBUG
-document.getElementById("debug").innerHTML = paused;
-alert(paused);
-
 
 /*
 music.onabort = function() {
