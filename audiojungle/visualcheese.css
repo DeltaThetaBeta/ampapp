@@ -1,0 +1,37 @@
+.flex-container {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	/* background-color: DodgerBlue; */
+}
+
+.flex-container > div {
+	/* background-color: #333333; */
+	margin: 0px;
+	text-align: center;
+	font-size: 2em;
+}
+
+#roof {
+	margin-top: 5rem;
+}
+
+#currentlyPlaying {
+    margin: .5em;
+}
+
+#songLength {
+    width: 25%;
+    background-color: grey;
+    margin: auto;
+}
+#songTime {
+  width: 0%;
+  height: 30px;
+  background-color: rgb(0, 140, 196);
+}
+
+#volumeSlideTXT {
+	margin-top: 0.5em;
+	margin-bottom: 0em;
+}

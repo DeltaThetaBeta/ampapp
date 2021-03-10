@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="robots" content="noindex,nofollow">
+		<!-- Page Title -->
+		<title>AUDIOJUNGLE</title>
+		<!-- Page Title -->
+		<!-- Get CSS Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="..\tomato.css">
+		<link rel="stylesheet" type="text/css" href="..\default.css">
+		<link rel="stylesheet" type="text/css" href="visualcheese.css">
+		<!-- Get CSS Stylesheets -->
+		<!-- Smol Custom CSS -->
+		<style>
+div, a {
+	color:white;
+	text-align:center;
+}
+		</style>
+		<!-- Smol Custom CSS -->
+	</head>
+	<body class="flex-container" onLoad="initButton();setDefaultVolume();getVolume();songName()">
+		<br id="roof">
+		<!-- javascript disabled warning -->
+		<div>
+			<noscript>
+				<p>BRUH! You have JavaScript disabled or maybe don't have it (x to doubt)!</p>
+				<p>Some functions may not work as intended!</p>
+			</noscript>
+		</div>
+		<!-- javascript disabled warning -->
+		<!-- Main Title -->
+		<div style="font:32px arial;font-weight:bold">
+			Music?
+		</div>
+		<!-- Main Title -->
+		<div>
+			<p id="currentSong"></p>
+		</div>
+		<!-- Media Controls -->
+		<div>
+			<button id="toggleBtn">Play/Pause The Music</button>
+			<!-- Current Media -->
+			<p id="currentlyPlaying"></p>
+			<!-- Current Media -->
+			<!-- Current Media Progress -->
+			<div id="songLength">
+			  <div id="songTime"></div>
+			</div>
+			<!-- Current Media Progress -->
+			<!-- Volume Slider -->
+			<p id="volumeSlideTXT">Volume: </p>
+			<div class="slidecontainer">
+				<input type="range" min="0" max="100" value="10" class="slider" id="volumeIn">
+			</div>
+			<!-- Volume Slider -->
+			<p id="currentVolume"></p>
+		</div>
+		<!-- Media Controls -->
+		<!-- Volume Buttons -->
+		<div>
+			<button onclick="setMuteVolume()" type="button">Set volume to 0%</button>
+			<button onclick="setFullVolume()" type="button">Set volume to 100%</button><br>
+			<audio id="theMusic" autoplay loop>
+				<source src="beatupapineapple.mp3" type="audio/mpeg">
+				<source src="beatupapineapple.ogg" type="audio/ogg">
+				Your browser does not support the audio element.
+			</audio>			
+			<noscript>
+				<audio id="theMusic" autoplay controls loop>
+					<source src="beatupapinapple.mp3" type="audio/mpeg">
+					<source src="beatupapinapple.ogg" type="audio/ogg">
+					Your browser does not support the audio element.
+				</audio>
+			</noscript>
+		</div>
+		<!-- Volume Buttons -->
+		<!-- Go Back -->
+		<div>
+			<a href="\">Home</a>
+		</div>
+		<!-- Go Back -->
+		<!-- DEBUG -->
+		<div>
+			<p id="debug"></p>
+		</div>
+		<!-- DEBUG -->
+		<!-- load JS -->
+		<script src="audiocheese.js"></script>
+		<!-- load JS -->
+	</body>
+</html>
