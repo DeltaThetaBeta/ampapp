@@ -5,12 +5,12 @@
 		<meta name="robots" content="noindex,nofollow">
 		<!-- Page Title -->
 		<title>AUDIOJUNGLE</title>
-		<!-- Page Title -->
+		<!-- !Page Title -->
 		<!-- Get CSS Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="..\tomato.css">
 		<link rel="stylesheet" type="text/css" href="..\default.css">
 		<link rel="stylesheet" type="text/css" href="visualcheese.css">
-		<!-- Get CSS Stylesheets -->
+		<!-- !Get CSS Stylesheets -->
 		<!-- Smol Custom CSS -->
 		<style>
 div, a {
@@ -18,7 +18,7 @@ div, a {
 	text-align:center;
 }
 		</style>
-		<!-- Smol Custom CSS -->
+		<!-- !Smol Custom CSS -->
 	</head>
 	<body class="flex-container" onLoad="setDefaultVolume();songName()">
 		<br id="roof">
@@ -29,12 +29,12 @@ div, a {
 				<p>Some functions may not work as intended!</p>
 			</noscript>
 		</div>
-		<!-- javascript disabled warning -->
+		<!-- !javascript disabled warning -->
 		<!-- Main Title -->
 		<div style="font:32px arial;font-weight:bold">
 			Music?
 		</div>
-		<!-- Main Title -->
+		<!-- !Main Title -->
 		<div>
 			<p id="currentSong"></p>
 		</div>
@@ -43,21 +43,21 @@ div, a {
 			<button id="toggleBtn">Play The Music</button>
 			<!-- Current Media -->
 			<p id="currentlyPlaying"></p>
-			<!-- Current Media -->
+			<!-- !Current Media -->
 			<!-- Current Media Progress -->
 			<div id="songLength">
 			  <div id="songTime"></div>
 			</div>
-			<!-- Current Media Progress -->
+			<!-- !Current Media Progress -->
 			<!-- Volume Slider -->
 			<p id="volumeSlideTXT">Volume: </p>
 			<div class="slidecontainer">
 				<input type="range" min="0" max="100" value="10" class="slider" id="volumeIn">
 			</div>
-			<!-- Volume Slider -->
+			<!-- !Volume Slider -->
 			<p id="currentVolume"></p>
 		</div>
-		<!-- Media Controls -->
+		<!-- !Media Controls -->
 		<!-- Volume Buttons -->
 		<div>
 			<button onclick="setMuteVolume()" type="button">Set volume to 0%</button>
@@ -75,19 +75,19 @@ div, a {
 				</audio>
 			</noscript>
 		</div>
-		<!-- Volume Buttons -->
+		<!-- !Volume Buttons -->
 		<!-- Go Back -->
 		<div>
 			<a href="\">Home</a>
 		</div>
-		<!-- Go Back -->
+		<!-- !Go Back -->
 		<!-- DEBUG -->
 		<div>
 			<p id="debug"></p>
 		</div>
-		<!-- DEBUG -->
+		<!-- !DEBUG -->
 		<!-- load JS -->
 		<script src="audiocheese.js"></script>
-		<!-- load JS -->
+		<!-- !load JS -->
 	</body>
 </html>

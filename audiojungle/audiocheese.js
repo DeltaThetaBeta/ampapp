@@ -7,11 +7,8 @@ var slider = document.getElementById("volumeIn");
 var divVolume;
 var musicSatus = false;
 
-// init Play/Pause button
-
-
-music.onplaying = function() {onPlaying()};
-
+// Play/Pause button
+music.onplaying = function() {onPlaying();};
 function onPlaying() {
   musicSatus = true;
   btntxt.innerHTML = "Pause The Music";
@@ -20,7 +17,6 @@ function onPlaying() {
 // use Play/Pause button
 document.getElementById("toggleBtn").addEventListener("click", toggleMusic);
 function toggleMusic() {
-
 	if (musicSatus) {
 		music.pause();
     btntxt.innerHTML = "Play The Music";
@@ -32,41 +28,40 @@ function toggleMusic() {
 
 
 // get current volume
-function getVolume() { 
-	if (Math.floor(music.volume*100) == 0){
+function getVolume() {
+  if (Math.floor(music.volume*100) == 0) {
 		currentVolume.innerHTML = "THE AUDIO IS MUTED!";
 		slider.value = 0;
 	} else {
 		currentVolume.innerHTML = "Current Volume is "+Math.floor(music.volume*100)+"%";
 		slider.value = (music.volume*100).toFixed(2);
 	}
-
-} 
+}
 
 // set the default volume
-function setDefaultVolume() { 
+function setDefaultVolume() {
 	music.volume = 0.1;
 	getVolume();
-} 
+}
 
 // mute the volume
-function setMuteVolume() { 
+function setMuteVolume() {
 	music.volume = 0.0;
 	getVolume();
-} 
+}
 
 // set full volume
-function setFullVolume() { 
+function setFullVolume() {
 	music.volume = 1.0;
 	getVolume();
-} 
+}
 
 // slider set and get volume
 slider.oninput = function() {
 	divVolume = (slider.value/100).toFixed(2);
   	music.volume = divVolume;
 	getVolume();
-} 
+};
 
 // get current playing file name
 function songName() {
@@ -74,9 +69,9 @@ function songName() {
 	var fileName = splitURL[splitURL.length - 1];
 	var songName = fileName.replace(".mp3", "");
 	document.getElementById("currentlyPlaying").innerHTML = "Playing: "+songName;
-	
+
 }
-music.ontimeupdate = function() {songProgress()};
+music.ontimeupdate = function() {songProgress();};
 // Song Progress Bar
 function songProgress() {
 	var songLength = music.duration;
@@ -91,7 +86,7 @@ function songProgress() {
 /*
 music.onabort = function() {
     alert("abort");
-}; 
+};
 
 music.onerror = function() {
     alert("error");
