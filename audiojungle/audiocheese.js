@@ -7,17 +7,8 @@ var slider = document.getElementById("volumeIn");
 var divVolume;
 var musicSatus = false;
 
-<<<<<<< HEAD
 // Play/Pause button
 music.onplaying = function() {onPlaying();};
-=======
-// init Play/Pause button
-
-
-
-music.onplaying = function() {onPlaying()};
-
->>>>>>> 14aac2e8b930e22efb080ec4173c8f03d7a56bf4
 function onPlaying() {
   musicSatus = true;
   btntxt.innerHTML = "Pause The Music";
