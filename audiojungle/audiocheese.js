@@ -5,70 +5,68 @@ var btntxt = document.getElementById("toggleBtn");
 var currentVolume = document.getElementById("currentVolume");
 var slider = document.getElementById("volumeIn");
 var divVolume;
-var paused = music.paused;
-// init Play/Pause button
-function initButton() {
-paused = music.paused;
-if (paused == true){
-	btntxt.innerHTML = "Play The Music";
-} else if (paused == false) {
-	btntxt.innerHTML = "Pause The Music";
-}
-}
+var musicSatus = false;
 
-music.onplaying = function() {
+// init Play/Pause button
+
+
+
+music.onplaying = function() {onPlaying()};
+
+function onPlaying() {
+  musicSatus = true;
   btntxt.innerHTML = "Pause The Music";
-};
+}
 
 // use Play/Pause button
 document.getElementById("toggleBtn").addEventListener("click", toggleMusic);
 function toggleMusic() {
-  initButton();
-	if (paused == true) {
-		music.play();
-//	btntxt.innerHTML = "Pause The Music";
-		paused = music.paused;
-	} else if (paused == false) {
+
+	if (musicSatus) {
 		music.pause();
-// btntxt.innerHTML = "Play The Music";
-		paused = music.paused;
+    btntxt.innerHTML = "Play The Music";
+    musicSatus = false;
+	} else {
+		music.play();
 	}
 }
+
 
 // get current volume
 function getVolume() { 
 	if (Math.floor(music.volume*100) == 0){
-		currentVolume.innerHTML = "THE AUDIO IS MUTED!"
+		currentVolume.innerHTML = "THE AUDIO IS MUTED!";
 		slider.value = 0;
 	} else {
 		currentVolume.innerHTML = "Current Volume is "+Math.floor(music.volume*100)+"%";
 		slider.value = (music.volume*100).toFixed(2);
 	}
+
 } 
 
 // set the default volume
 function setDefaultVolume() { 
 	music.volume = 0.1;
-	getVolume()
+	getVolume();
 } 
 
 // mute the volume
 function setMuteVolume() { 
 	music.volume = 0.0;
-	getVolume()
+	getVolume();
 } 
 
 // set full volume
 function setFullVolume() { 
 	music.volume = 1.0;
-	getVolume()
+	getVolume();
 } 
 
 // slider set and get volume
 slider.oninput = function() {
 	divVolume = (slider.value/100).toFixed(2);
   	music.volume = divVolume;
-	getVolume()
+	getVolume();
 } 
 
 // get current playing file name
