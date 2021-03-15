@@ -10,6 +10,7 @@ var musicSatus = false;
 // init Play/Pause button
 
 
+
 music.onplaying = function() {onPlaying()};
 
 function onPlaying() {
@@ -86,7 +87,6 @@ function songProgress() {
 }
 
 // DEBUG
-
 
 /*
 music.onabort = function() {
